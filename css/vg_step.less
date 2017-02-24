@@ -1,0 +1,209 @@
+.card_vg{
+  .vg_back{
+    a{
+      color: @primary;
+      font-size:20px;
+      span{
+        transform: rotate(180deg);
+        display:inline-block;
+        line-height:20px;
+        padding-left:5px;
+      }
+    }
+    @media @xs{
+      padding-bottom:20px;
+    }
+  }
+  .vg_wrap{
+    max-width:600px;
+    margin:0 auto;
+    .fea_title{
+      text-transform: capitalize;
+      font-size:35px;
+      margin:0;
+    }
+    .vg_txt{
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .vg_img{
+      img{
+        width:100%;
+      }
+    }
+    .vg_point{
+      max-width:450px;
+      margin:30px auto;
+      >li{
+        position:relative;
+        padding: 10px 0;
+        padding-left: 35px;
+        font-size:14px;
+        font-weight:400;
+        &:before{
+          content: "done";
+          font-family: 'Material Icons';
+          color: #0099ff;
+          font-size: 25px;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          font-weight: 600;
+        }
+      }
+    }
+    .vg_activity{
+      text-align:center;
+      .c_btn{
+        color:#fff;
+        background:@primary;
+      }
+    }
+  }
+}
+
+
+.vg_tabs{
+  padding:30px 0;
+  @sst_border:#dadada;
+  .sm_txt{
+    font-size:14px;
+    line-height:20px;
+    text-align: center;
+    margin:0;
+    margin-top:30px;
+  }
+  .ss_tabs{
+    border:1px solid #000;
+    height: 300px;
+    @media @xs{
+      height:auto;
+      border:none;
+    }
+  }
+  .sst_list,
+  .sst_content{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 0;
+  }
+  .sst_list{
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+    width:20%;
+    border-right:1px solid #000;
+    >li{
+      display: block;
+      font-size: 14px;
+      &.active{
+        .sstl_button{
+          background: @primary;
+          color:#fff;
+        }
+      }
+    }
+  }
+  //TAB BUTTON
+  .sstl_button{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+    padding: 0px 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+  }
+  //MOBILE ACCORDIAN BUTTON
+  .sstc_button{
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    &:after{
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      content: '❯';
+      text-align: center;
+      font-size: 20px;
+    }
+    &.active{
+      background:@primary;
+      color:#fff;
+      &:after{
+        .m_transform(rotateZ(90deg));
+      }
+    }
+  }
+
+  //TAB CONTENT
+  .sst_content{
+    position: relative;
+    margin-top: -1px;
+    z-index: 1;
+    >li{
+      font-size: 14px;
+      display: none;
+    }
+
+  }
+  //FULL TABS
+  .sstc_data{
+    padding: 30px;
+    white-space: normal;
+    text-align:center;
+    font-size:16px;
+    line-height:20px;
+    color:#b3b3b3;
+  }
+
+  //FULL TABS
+  .ss_tabs.sst_full{
+    .sst_list{
+      display: table;
+      width: 100%;
+      >li{
+        display: table-cell;
+        vertical-align: top;
+        >a{
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media @xs{
+    .sst_list{
+      display: none;
+    }
+    .sstc_button{
+      display: block;
+    }
+    .sst_content{
+      border:1px solid #000;
+      border-bottom:none;
+      >li{
+        display: block!important;
+        border-bottom:1px solid #000;
+      }
+    }
+    .sstc_data{
+      display: none;
+      padding: 20px;
+    }
+  }
+}

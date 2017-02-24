@@ -1,0 +1,352 @@
+#features{
+  .content{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:0;
+  }
+  .ss_container{
+    padding-left:30px;
+    padding-right:30px;
+  }
+}
+.c_nav{
+  position:absolute;
+  top:50%;
+  right:20px;
+  z-index:100;
+  >li{
+    padding:10px;
+    >a{
+      width:15px;
+      height:15px;
+      display:block;
+      border-radius:50%;
+      border:1px solid #666;
+      &.active{
+        background:@primary;
+      }
+      &:hover{
+        background:@primary;
+      }
+    }
+  }
+  @media @xs{
+	right:10px;
+  }
+}
+.fe_activity{
+  text-transform: uppercase;
+  font-size:14px;
+  font-weight:600;
+  transition: all 0.2s;
+  color:#000;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.card_header{
+  text-align:center;
+  .card_title{
+    font-size:35px;
+    color:@primary;
+    text-transform: uppercase;
+    margin-bottom:10px;
+    margin-top: 0;
+  }
+  span{
+    font-size:18px;
+    color:#666;
+  }
+  @media @xs{
+    .card_title{
+      font-size:30px;
+    }
+  }
+  @media @s500{
+    .card_title{
+      font-size:28px;
+    }
+  }
+}
+
+
+.fx_height{
+  width:100%;
+  position:absolute;
+  top:100px;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow-y:scroll;
+  @media @xs{
+	top:50px;
+  }
+}
+.fix_tbl{
+  width:100%;
+  height:100%;
+  padding:40px 0;
+  >.tblcl{
+    width:100%;
+    height:100%;
+    vertical-align: middle;
+  }
+  @media @xs{
+    padding:50px 0;
+  }
+}
+.card_experience{
+  z-index:10;
+  opacity:1;
+}
+
+.exp_content{
+  width:500px;
+  margin:30px auto 20px;
+  position:relative;
+  .exp_fix{
+    width:10px;
+    height:100%;
+    output{
+      display:none;
+    }
+  }
+  .ex{
+    width:100%;
+    height:60px;
+    a{
+      color:#999;
+      font-weight:600;
+      font-size:14px;
+      &:hover{
+        color:@primary;
+      }
+      &.active{
+        color:@primary;
+        font-weight:700;
+      }
+    }
+  }
+  .ex_h{
+    height:30px;
+  }
+  .exp_left{
+    .ex{
+      padding-right:30px;
+      text-align:right;
+    }
+  }
+  .exp_right{
+    .ex{
+      margin-left:30px;
+      text-align:left;
+    }
+  }
+  @media @s500{
+    width:90%;
+    margin:20px auto 0;
+    .rangeslider--vertical {
+      min-height: 260px;
+      max-height: 100%;
+    }
+    .ex{
+      height:60px;
+    }
+    .ex_h{
+      height:20px;
+    }
+  }
+}
+.year{
+  margin:10px 0 30px;
+  h5{
+    text-align:center;
+    font-size:28px;
+    color:#888;
+    margin:5px 0;
+    font-weight:300;
+    input[type="text"]{
+      width:40px;
+      height:30px;
+      line-height:30px;
+      font-size:25px;
+      padding:2px 5px;
+      outline: none;
+      color:@primary;
+      border:none;
+      border-bottom:1px solid @primary;
+    }
+  }
+}
+
+.card_industry{
+  z-index:0;
+  opacity:0;
+  background: #fff;
+  &.open{
+    z-index:10;
+    opacity:1;
+  }
+}
+
+.i_activity{
+  text-align: center;
+  .c_btn{
+    background:@primary;
+    color:#fff;
+    display:block;
+    width:250px;
+    margin:10px auto;
+    font-size:16px;
+    font-weight:600;
+    &.c_btn2{
+      border:none;
+      background:transparent;
+      color:#333;
+    }
+  }
+}
+
+
+.card_expertise{
+  z-index:0;
+  opacity:0;
+  background:#fff;
+  &.open{
+    z-index:10;
+    opacity:1;
+  }
+}
+.e_list{
+  text-align: center;
+  margin:30px auto;
+  max-width:800px;
+  >li{
+    width:25%;
+    float:left;
+    padding:10px;
+    input[type="checkbox"]{
+      display: none;
+    }
+    label{
+      height:50px;
+      border:1px solid #a4a4a4;
+      border-radius:3px;
+      .tblcl{
+        text-transform: uppercase;
+        vertical-align: middle;
+        font-size:14px;
+        line-height:13px;
+        color:#999;
+        padding:0 25px;
+      }
+    }
+    input[type="checkbox"]:checked + label .tblcl{
+      color:@primary;
+      border-color:@primary;
+    }
+    &:first-child{
+      width:100%;
+      text-align:center;
+      label{
+        width:25%;
+        margin:0px auto;
+      }
+    }
+    &:last-child{
+      width:100%;
+      text-align:center;
+      label{
+        width:25%;
+        margin:0px auto;
+      }
+    }
+    &:hover{
+      label{
+        border-color:@primary;
+        .tblcl{
+          color:@primary;
+        }
+      }
+    }
+  }
+  &.i_list{
+	>li{
+		&:last-child{
+			width:25%;
+			label{
+				width:100%;
+			}
+		}
+	}
+	@media @xs{
+		>li{
+			label{
+				.tblcl{
+					padding:0 8px;
+				}
+			}
+			&:last-child{
+				width:33%;
+			}
+		}
+	}
+	@media @s500{
+		>li{
+			&:last-child{
+				width:100%;
+			}
+		}
+	}
+  }
+  @media @xs{
+    max-width:600px;
+    >li{
+      width:33%;
+      label{
+        height:50px;
+        font-size:14px;
+      }
+      &:first-child{
+        width:33%;
+        float:left;
+        label{
+          width:100%;
+          margin:auto;
+        }
+      }
+      &:last-child{
+        width:33%;
+        float:left;
+        label{
+          width:100%;
+        }
+      }
+    }
+  }
+
+  @media @s500{
+    padding:0 10px;
+    >li{
+      width:50%;
+      padding:5px;
+      label{
+        height:40px;
+        .tblcl{
+          padding:0 10px;
+          font-size:13px;
+        }
+      }
+      &:first-child{
+        width:50%;
+      }
+      &:last-child{
+        width:50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,379 @@
+.fea_title{
+  font-size: 40px;
+  text-align: center;
+  color:#000;
+  font-weight:700;
+  text-transform: uppercase;
+  margin-top:0;
+  &.c_t{
+    color:@primary;
+  }
+  @media @xs{
+	font-size:30px;
+  }
+}
+.card2{
+  padding:50px 0;
+}
+.card3{
+  padding: 80px 0;
+}
+.sub_title{
+  font-size: 30px;
+  color:@primary;
+  text-transform: uppercase;
+  @media @xs{
+	font-size:25px;
+	margin:5px 0;
+  }
+}
+.card_features{
+  width:100%;
+  height:100%;
+  position:relative;
+  background: -moz-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(250,250,250,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ie10+ */
+background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* ie6-9 */
+  .ss_container{
+    height:100%;
+  }
+  .sc_aerrow{
+    position:absolute;
+    bottom:30px;
+    right:48%;
+    font-size: 60px;
+    color:@primary;
+    transform:rotate(-45deg);
+  }
+  .fix_content{
+    width:100%;
+    height:100%;
+    .fea_txt{
+      p{
+        width:75%;
+        font-size:25px;
+        color:#6c6c6c;
+      }
+    }
+    .fea_img{
+      vertical-align: middle;
+      img{
+        width:100%;
+      }
+    }
+  }
+  @media @sm{
+	.fix_content{
+		.fea_txt{
+			display:block;
+			width:100%;
+			padding-bottom:50px;
+			.img_wrap{
+				img{
+					width:100%;
+				}
+			}
+		}
+		.fea_img{
+			width:100%;
+			display:block;
+			padding-bottom:50px;
+		}
+	}
+  }
+  @media @xs{
+	.sc_aerrow{
+		right:42%;
+		bottom:0;
+		font-size:50px;
+	}
+	.fix_content{
+		.fea_txt{
+			p{
+				font-size:20px;
+			}
+		}
+		.fea_img{
+			padding-bottom:20px;
+		}
+	}
+  }
+  @media @s500{
+	.fix_content{
+		.fea_txt{
+			text-align:center;
+			p{
+				font-size:16px;
+				width:100%;
+				margin:5px 0;
+			}
+		}
+	}
+  }
+}
+
+.card_design{
+  width:100%;
+  height:100%;
+  background: -moz-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(250,250,250,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* ie6-9 */
+  .slick-slide{
+    text-align: center;
+    transform:scale(0.9);
+    transition: all 0.3s;
+    img{
+      display:inline-block;
+    }
+  }
+  .slick-center{
+    transform:scale(1);
+    img{
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+    }
+  }
+  p{
+    color:#6c6c6c;
+    font-size:20px;
+    text-align:center;
+    margin:0;
+    margin-top:20px;
+  }
+  .sub_title{
+    text-align:center;
+  }
+  .design_wrap{
+    position:relative;
+    padding:30px 0 50px;
+    margin:0 auto;
+    li{
+      width: 320px;
+    }
+    .slick-prev{
+      position:absolute;
+      top:48%;
+      font-size:50px;
+      left:-30px;
+      outline: none;
+      color:@primary;
+      font-weight:100;
+    }
+    .slick-next{
+      position:absolute;
+      top:48%;
+      font-size:50px;
+      right:-30px;
+      outline: none;
+      color:@primary;
+      font-weight:100;
+    }
+  }
+  @media @xs{
+   padding:50px 0;
+	.design_wrap{
+		padding:0;
+		.slick-prev{
+			left: -20px;
+		}
+		.slick-next{
+			right: -20px;
+		}
+	}
+  }
+}
+
+.card_expert{
+  background: -moz-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(250,250,250,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* ie6-9 */
+  .fix_content{
+    .exp_txt{
+		width:40%;
+      .sub_title{
+        text-align:right;
+      }
+      .expert_wrap{
+        border-radius:5px;
+        margin-top:  80px;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+        .ex_header{
+          background:@primary;
+          position: relative;
+          height:50px;
+          line-height:50px;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          p{
+            margin:0;
+            color:#fff;
+            text-transform: uppercase;
+            text-align:center;
+            font-size:18px;
+          }
+          .ex_close{
+            width:50px;
+            position:absolute;
+            top:0;
+            right:0;
+            height:50px;
+            text-align: center;
+            .material-icons{
+              color:#fff;
+              line-height:50px;
+            }
+          }
+        }
+        .ex_content{
+          .post_wrap{
+            padding:40px;
+			border-bottom:1px solid #dadada;
+			position:relative;
+			.slick-next,.slick-prev{
+				position:absolute;
+				top:38%;
+				outline:none;
+				right:0;
+				font-size:25px;
+			}
+			.aerrow{
+				left:0;
+				transform: rotate(180deg);
+			}
+          }
+          .post{
+            width:70%;
+            margin:0 auto;
+            .post_icon{
+              width:40px;
+              padding-right:10px;
+            }
+            .post_txt{
+              p{
+                margin:0;
+                font-size:14px;
+                line-height:18px;
+              }
+              span{
+                font-size:13px;
+                display:block;
+                line-height:16px;
+              }
+            }
+          }
+		  .point_wrap{
+			padding-bottom:30px;
+			h3{
+				margin:20px 0;
+				text-align:center;
+				text-transform:uppercase;
+			}
+			.point{
+				width:70%;
+				margin:0 auto;
+				padding:0px 0 30px 0;
+				li{
+					.sub_point{
+					    list-style:disc;
+						li{
+							padding:2px 0;
+							font-size:13px;
+						}
+					}
+				}
+			}
+			@media @s1100{
+				.point{
+					width:80%;
+				}
+			}
+		  }
+        }
+      }
+    }
+	@media @sm{
+		.exp_img{
+			width:100%;
+			display:block;
+			text-align:center;
+		}
+		.exp_txt{
+			width:100%;
+			display:block;
+			padding-top:30px;
+			.sub_title{
+				text-align:center;
+			}
+			.expert_wrap{
+				max-width:500px;
+				margin:0 auto;
+				margin-top:50px;
+			}
+		}
+	}
+	@media @s500{
+		.exp_img{
+			width:100%;
+			img{
+				max-width:300px;
+				margin:0 auto;
+			}
+		}
+		.exp_txt{
+			width:100%;
+			display:block;
+			padding-top:30px;
+			.sub_title{
+				text-align:center;
+			}
+			.expert_wrap{
+				.ex_content{
+					.post_wrap{
+						.post{
+							width:100%;
+						}
+					}
+					.point_wrap{
+						h3{
+							margin:10px 0 8px;
+						}
+						.point{
+							width:100%;
+							padding:0px 10px 30px 10px;
+							li{
+								.sub_point{
+									padding-left:20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+  }
+}
+
+
+.card_cv{
+	text-align:center;
+	.c_btn{
+		background:@primary;
+		color:#fff;
+		font-size:16px;
+	}
+	@media @s500{
+		padding:50px 0;
+	}
+}

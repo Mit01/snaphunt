@@ -1,0 +1,197 @@
+#signup_popup,#signin_popup{
+  .popup_content{
+    padding-top:0;
+    padding-bottom:50px;
+    h1{
+      margin:0;
+      margin-bottom:30px;
+      text-align:center;
+    }
+  }
+}
+.fix_popup{
+	max-width:600px;
+	margin:0 auto;
+}
+.sign_or{
+	margin:15px 0;
+	padding:10px 0;
+	text-align:center;
+	position:relative;
+	span{
+		font-size:12px;
+		font-weight:700;
+	}
+	&:before{
+		content:"";
+		width:30%;
+		height:2px;
+		background:#f6f6f6;
+		position:absolute;
+		top:20px;
+		left:100px;
+	}
+	&:after{
+		content:"";
+		width:30%;
+		height:2px;
+		background:#f6f6f6;
+		position:absolute;
+		top:20px;
+		right:100px;
+	}
+}
+
+.social_p{
+  text-align:center;
+  margin:0 -10px;
+  >li{
+    width:50%;
+    padding:0 10px;
+    display:inline-block;
+    float:left;
+    a{
+      padding:10px;
+      border-radius:3px;
+      color:#fff;
+      font-size: 14px;
+    }
+    .s_icon{
+      width:30px;
+      height:20px;
+      img{
+        height:20px;
+      }
+    }
+    .s_name{
+      vertical-align: middle;
+      text-align:left;
+      padding-left:10px;
+    }
+    .fb{
+      background:@facebook;
+      .s_icon{
+        width:20px;
+      }
+    }
+
+    .tw{
+      background:@linkedin;
+    }
+  }
+}
+.form_wrap{
+  text-align:center;
+  .c_btn{
+    background:@primary;
+    color:#fff;
+  }
+}
+.sign_form{
+	margin:30px -15px;
+	>li{
+		padding:5px 15px;
+		float:left;
+		width:50%;
+    text-alig:left;
+		.textbox{
+			border:none;
+			border-bottom:1px solid #000;
+			outline:none;
+      font-size:15px;
+		}
+	}
+}
+
+.terms{
+  margin-bottom:30px;
+  text-align: center;
+  input[type="checkbox"]{
+    display:none;
+  }
+  label{
+    font-size:14px;
+    span{
+      display:inline-block;
+      padding-top:5px;
+    }
+    a{
+      color:@primary;
+      text-decoration: underline;
+    }
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius:3px;
+      margin: -1px 5px 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: background-color 0.4s linear;
+      border: 1px solid @primary;
+    }
+  }
+  input[type="checkbox"]:checked + label:before {
+    content: "done";
+    font-family: 'Material Icons';
+    color:#fff;
+    font-size:14px;
+    background:@primary;
+  }
+}
+
+@media @xs{
+  #signup_popup{
+    .popup_content{
+      h1{
+        margin-bottom:15px;
+      }
+    }
+  }
+  .fix_popup{
+    max-width:400px;
+  }
+  .sign_or{
+    margin:0;
+    &:before{
+      left:30px;
+    }
+    &:after{
+      right:30px;
+    }
+  }
+  .social_p{
+    text-align: center;
+    >li{
+      width:280px;
+      display:inline-block;
+      padding:5px 10px;
+      text-align: left;
+      float:none;
+      .fb{
+        .s_icon{
+          text-align:center;
+        }
+      }
+      .tw{
+        .s_icon{
+          width:20px;
+        }
+      }
+    }
+  }
+  .form_wrap{
+    .c_btn{
+      width:60%;
+      margin:0 auto;
+    }
+  }
+  .sign_form{
+    >li{
+      width:100%;
+      float:none;
+      display:block;
+    }
+  }
+}
